@@ -1,0 +1,41 @@
+#!/bin/bash
+clear
+while true
+do
+	clear
+    echo "1 - Atualização dos Aplicativos - Modo Simples"
+    echo "2 - Atualização dos Aplicativos - Modo Avançado"
+    echo "3 - Atualização do Sistema"
+    echo "4 - Remover Aplicativos"
+    echo "5 - Sair"
+    read opcao;
+    if [ $opcao == "1" ];
+        then
+            echo "Abrindo Atualização dos Aplicativos - Modo Simples"
+            sudo apt-get update
+			sudo apt-get upgrade -y
+    elif [ $opcao == "2" ];
+        then
+            echo "Atualização dos Aplicativos - Modo Avançado"
+            sudo apt-get update
+            apt-get dist-upgrade -y
+	elif [ $opcao == "3" ];
+        then
+            echo "Atualização do Sistema"
+            sudo apt-get update
+            apt-get full-upgrade -y
+    elif [ $opcao == "4" ];
+        then
+            echo "Abrindo VPN do CAPTURETHEFLAG"
+            apt-get autoremove
+	elif [ $opcao == "5" ];
+        then
+            echo "Saindo das Atualizações"
+            sleep 1
+            exit
+    else
+        echo "Opção Inválida!"
+        sleep 1
+        clear
+    fi
+done
