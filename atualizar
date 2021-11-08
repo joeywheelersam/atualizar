@@ -2,7 +2,7 @@
 clear
 while true
 do
-	clear
+    clear
     echo "1 - Atualização dos Aplicativos - Modo Simples"
     echo "2 - Atualização dos Aplicativos - Modo Avançado"
     echo "3 - Atualização do Sistema"
@@ -11,9 +11,9 @@ do
     read opcao;
     if [ $opcao == "1" ];
         then
-            echo "Abrindo Atualização dos Aplicativos - Modo Simples"
+	    echo "Abrindo Atualização dos Aplicativos - Modo Simples"
             sudo apt-get update
-			sudo apt-get upgrade -y
+	    sudo apt-get upgrade -y
     elif [ $opcao == "2" ];
         then
             echo "Atualização dos Aplicativos - Modo Avançado"
