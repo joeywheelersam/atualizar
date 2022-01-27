@@ -2,7 +2,7 @@
 clear
 while true
 do
-    clear
+	clear
     echo "1 - Atualização dos Aplicativos - Modo Simples"
     echo "2 - Atualização dos Aplicativos - Modo Avançado"
     echo "3 - Atualização do Sistema"
@@ -11,31 +11,44 @@ do
     read opcao;
     if [ $opcao == "1" ];
         then
-	    echo "Abrindo Atualização dos Aplicativos - Modo Simples"
+            clear
+            echo "Abrindo Atualização dos Aplicativos - Modo Simples"
             sudo apt-get update
-	    sudo apt-get upgrade -y
+			sudo apt-get upgrade -y
+            echo "Sistema Atualizado no Modo Simples, tecle enter para voltar."
+            read
     elif [ $opcao == "2" ];
         then
+            clear
             echo "Atualização dos Aplicativos - Modo Avançado"
             sudo apt-get update
             apt-get dist-upgrade -y
+            echo "Sistema Atualizado no Modo Avançado, tecle enter para voltar."
+            read
 	elif [ $opcao == "3" ];
         then
+            clear
             echo "Atualização do Sistema"
             sudo apt-get update
             apt-get full-upgrade -y
+            echo "Sistema Atualizado, tecle enter para voltar."
+            read
     elif [ $opcao == "4" ];
         then
-            echo "Removendo Aplicativos"
+            clear
+            echo "Remover Aplicativos"
             apt-get autoremove
+            echo "Removido Aplicativos, tecle enter para voltar."
+            read
 	elif [ $opcao == "5" ];
         then
-            echo "Saindo das Atualizações"
-            sleep 1
+            clear
+            echo "Saindo do aplicativo, tecle enter."
+            read
             exit
     else
-        echo "Opção Inválida!"
-        sleep 1
         clear
+        echo "Opção Inválida, tecle enter para retornar."
+        read
     fi
 done
