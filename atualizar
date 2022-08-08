@@ -13,38 +13,38 @@ do
     if [ $opcao == "1" ];
         then
             clear
-            echo "Abrindo Atualização dos Aplicativos - Modo Simples"
+            echo -e "Abrindo Atualização dos Aplicativos - Modo Simples\n"
             sudo apt-get update
-                        sudo apt-get upgrade -y
-            echo "Sistema Atualizado no Modo Simples, tecle enter para voltar."
+            sudo apt-get upgrade -y
+            echo -n -e "\nSistema Atualizado no Modo Simples, tecle enter para voltar."
             read
     elif [ $opcao == "2" ];
         then
             clear
-            echo "Atualização dos Aplicativos - Modo Avançado"
+            echo -e "Atualização dos Aplicativos - Modo Avançado\n"
             sudo apt-get update
             apt-get dist-upgrade -y
-            echo "Sistema Atualizado no Modo Avançado, tecle enter para voltar."
+            echo -n -e "\nSistema Atualizado no Modo Avançado, tecle enter para voltar."
             read
         elif [ $opcao == "3" ];
         then
             clear
-            echo "Atualização do Sistema"
+            echo -e "Atualização do Sistema\n"
             sudo apt-get update
             apt-get full-upgrade -y
-            echo "Sistema Atualizado, tecle enter para voltar."
+            echo -n -e "\nSistema Atualizado, tecle enter para voltar."
             read
     elif [ $opcao == "4" ];
         then
             clear
-            echo "Remover Aplicativos"
-            apt-get autoremove
-            echo "Removido Aplicativos, tecle enter para voltar."
+            echo -e "Remover Aplicativos\n"
+            apt-get autoremove -y
+            echo -n -e "\nRemovido Aplicativos, tecle enter para voltar."
             read
         elif [ $opcao == "5" ];
         then
             clear
-            echo "Saindo do aplicativo, tecle enter."
+            echo -n "Saindo do aplicativo, tecle enter."
             read
             exit
     else
