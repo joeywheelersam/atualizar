@@ -8,10 +8,8 @@ do
     echo "3 - Atualização do Sistema"
     echo "4 - Remover Aplicativos"
     echo "5 - Sair"
-
-    echo -e "\nDigite a opção: "
+    echo -n -e "\nDigite a opção: "
     read opcao
-
     if [ $opcao == "1" ];
         then
             clear
