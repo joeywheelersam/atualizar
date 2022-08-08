@@ -49,7 +49,7 @@ do
             exit
     else
         clear
-        echo "Opção Inválida, tecle enter para retornar."
+        echo -n "Opção Inválida, tecle enter para retornar."
         read
     fi
 done
