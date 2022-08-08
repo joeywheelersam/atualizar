@@ -48,7 +48,6 @@ do
             read
             exit
     else
-        clear
         echo -n "Opção Inválida, tecle enter para retornar."
         read
     fi
